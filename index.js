@@ -97,7 +97,7 @@ const init = async () => {
     try {
         const answers = await promptUser();
         const markdown = generateMarkdown(answers);
-        await writeFileAsync("README.MD", markdown);
+        await writeFileAsync("Demo README.MD", markdown);
 
         console.log("Successfully wrote README.md");
 
