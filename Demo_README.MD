@@ -1,9 +1,9 @@
- # Demo5
+ # demo 7
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
-Demo5
+demo 7
 
 ## Table of Contents
 
@@ -16,27 +16,22 @@ Demo5
   * [Questions](#questions)
 
 ## Installation Intructions
-Demo5
+demo 7
 
 ## Usage Information
-Demo5
+demo 7
 
-function renderLicenseSection(license) {
-  if (license !== "No license") {
-    return `## License
-    This project has been created under the ${answers.license} license.`;
-  }
-  return "";
-}
+## License
+    This project has been created under the MIT license.
 
 ## Contribution Guidelines
-Demo5
+demo 7
 
 ## Test Instructions
-Demo5
+demo 7
 
 ## GitHub Username
-Demo5
+demo 7
 
 ## Questions
-Please email me with any questions at Demo5
+Please email me with any questions at demo 7

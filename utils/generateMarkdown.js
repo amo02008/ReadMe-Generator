@@ -35,7 +35,7 @@ function renderLicenseLink(license) {
 function renderLicenseSection(license) {
   if (license !== "No license") {
     return `## License
-    This project has been created under the ${answers.license} license.`;
+    This project has been created under the ${license} license.`;
   }
   return "";
 };
@@ -64,7 +64,7 @@ ${answers.installationInstructions}
 ## Usage Information
 ${answers.usageInforamtion}
 
-${renderLicenseSection}
+${renderLicenseSection(answers.license)}
 
 ## Contribution Guidelines
 ${answers.contributionGuidelines}
