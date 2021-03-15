@@ -75,10 +75,3 @@ const init = async () => {
 };
 
 init();
-
-//code from class
-
-const init = async () => {
-  const answers = await promptUser();
-  const markdown = generateMarkdown(answers);
-};
