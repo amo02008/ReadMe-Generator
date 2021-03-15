@@ -1,19 +1,15 @@
-const badgeLicense = renderLicenseBadge(answers.license);
-const linkLicense = renderLicenseLink(answers.license);
-const sectionLicense = renderLicenseSection(answers.license);
-
 function renderLicenseBadge(license) {
   switch (license) {
     case "MIT":
-      return "[![GitHub license](https://img.shields.io/badge/license-MIT-brightgreen)](https://img.shields.io/badge/license-MIT-brightgreen)";
+      return "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
     case "GNU GPL v3.0":
-      return "[![GitHub license](https://img.shields.io/badge/license-GNU_GPL_v3.0-brightgreen)](https://img.shields.io/badge/license-GNU_GPL_v3.0-brightgreen)";
+      return "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)";
     case "GNU AGPL v3.0":
-      return "[![GitHub license](https://img.shields.io/badge/license-GNU_AGPL_v3.0-brightgreen)](https://img.shields.io/badge/license-GNU_AGPL_v3.0-brightgreen)";
+      return "[![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)";
     case "BSD 2-Clause":
-      return "[![GitHub license](https://img.shields.io/badge/license-BSD_2_Clause-brightgreen)](https://img.shields.io/badge/license-BSD_2_Clause-brightgreen)";
+      return "[![License](https://img.shields.io/badge/License-BSD%202--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)";
     case "BSD 3-Clause":
-      return "[![GitHub license](https://img.shields.io/badge/license-BSD_3_Clause-brightgreen)](https://img.shields.io/badge/license-BSD_3_Clause-brightgreen)";
+      return "[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)";
     case "No license":
       return "";
   }
@@ -37,22 +33,19 @@ function renderLicenseLink(license) {
 }
 
 function renderLicenseSection(license) {
-  if (license === "No license") {
-    return "";
-  } else {
-    return `
-    ## License
-      
+  if (license !== "No license") {
+    return `## License
     This project has been created under the ${answers.license} license.`;
   }
-}
+  return "";
+};
 
 const generateMarkdown = (answers) => {
-  return ` ${answers.projectTitle}
+  return ` # ${answers.projectTitle}
 
 ${renderLicenseBadge(answers.license)}
 
-## Description
+## Description
 ${answers.description}
 
 ## Table of Contents
@@ -65,14 +58,15 @@ ${answers.description}
   * [Tests](#tests)
   * [Questions](#questions)
 
-## Installation Instructions
+## Installation Intructions
 ${answers.installationInstructions}
 
-## Usage Inforamtion
+## Usage Information
 ${answers.usageInforamtion}
+
 ${renderLicenseSection}
 
-##Contribution Guidelines
+## Contribution Guidelines
 ${answers.contributionGuidelines}
 
 ## Test Instructions
@@ -81,7 +75,7 @@ ${answers.testInstructions}
 ## GitHub Username
 ${answers.username}
 
-##Questions
+## Questions
 Please email me with any questions at ${answers.emailAddress}`;
 };
 
