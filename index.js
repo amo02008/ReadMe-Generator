@@ -2,7 +2,6 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
-const generateMarkdown = require("./utils/generateMarkdown.js");
 
 const writeFileAsync = util.promisify(fs.writeFile);
 
@@ -67,11 +66,15 @@ const promptUser = () => {
 };
 
 const init = async () => {
-  const answers = await promptUser();
-  const markdown = generateMarkdown(answers);
-  
-  await writeFileAsync("DemoREADME.md", markdown);
-  console.log("Successfully wrote README");
+  try {
+    const answers = await promptUser();
+    const markdown = generateMarkdown(answers);
+    await writeFileAsync("Demo_README.MD", markdown);
+
+    console.log("Successfully wrote README");
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 init();
