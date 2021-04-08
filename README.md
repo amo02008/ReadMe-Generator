@@ -1,6 +1,6 @@
 # ReadMe-Generator
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
 A markdown command line interface for creating README files
@@ -18,7 +18,7 @@ A markdown command line interface for creating README files
 ## Installation Instructions
 1. Fork this repo
 2. Install Node.js ```npm i node```
-3. Instal Inquirer ```npm i inquirer```
+3. Install Inquirer ```npm i inquirer```
 
 ## Usage Inforamtion
 Open your terminal type ```node index```
